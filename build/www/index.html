@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="app/css/style.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <!--<script src="lib/require.js" data-main="app/main"></script>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js" data-main="app/main"></script>
+</head>
+<body>
+<div id="container">
+    <!-- ko template: { name: 'player', data: playerViewModel } --><!-- /ko -->
+    <!-- ko template: { name: 'intro', data: introViewModel } --><!-- /ko -->
+    <!-- ko template: { name: 'question', data: questionViewModel } --><!-- /ko -->
+    <!-- ko template: { name: 'result', data: resultViewModel } --><!-- /ko -->
+    <iframe id="spider" src="app/spider/html/spiderweb.html" width="500" height="250" frameborder="0" scrolling="no"></iframe>
+    <!-- ko template: { name: 'top', data: topViewModel } --><!-- /ko -->
+</div>
+</body>
+</html>

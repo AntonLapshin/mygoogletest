@@ -1,0 +1,91 @@
+@import url('/app/css/button.css');
+@import url('/app/css/button-answers.css');
+@import url('/app/css/progress.css');
+
+#container { position: absolute; left: 0; top: 0; width: 600px; height: 650px; text-align: center; }
+#progress-wrapper { width: 90%; display: inline-block; }
+#progress-wrapper p { margin: 5px; }
+#question-wrapper { background:#f0f0f0; width: 90%; border: 1px solid #ddd; display: inline-block; padding-bottom: 5px; padding-top: 10px; }
+#question-wrapper h3 { margin-left: 5px; margin-right: 5px; }
+ul { list-style: none; margin: 0; padding: 0; display: inline-block; }
+ul li { display: block; }
+#result a { display: inline-block; }
+
+h2 { margin: 5px; margin-top: 15px; }
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#question {
+    text-align: center;
+}
+
+#time-wrapper{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#time-wrapper span{
+    font-weight: bold;
+    font-size: 60pt;
+    opacity: 0.3;
+    color: #245269;
+}
+/* --------------------------- Player ------------------------ */
+#player {
+    margin: 10px 0 0 20px;
+    text-align: left;
+    background:#f0f0f0;
+}
+
+#player .top-item {
+    width: 550px;
+    border: 1px solid #ddd;
+}
+
+/* --------------------------- Spider ------------------------ */
+#spider{
+    margin-top: 30px;
+    display: none;
+}
+/* ---------------------------- Top -------------------------- */
+#top{
+    padding: 3px;
+    background:#f0f0f0;
+    border: 1px solid #ddd;
+    text-align: left;
+    position: absolute;
+    left: 600px;
+    top: 10px;
+}
+
+.top-item:hover{
+    background-color: #98d279;
+}
+
+.top-item{
+    padding: 3px;
+    margin: 1px;
+    border: 1px solid #ccc;
+    display: block;
+    vertical-align: middle;
+    width: 250px;
+    cursor: pointer;
+}
+
+.top-item > p{
+    font-size: 10pt;
+    line-height: 1;
+    margin: 8px;
+}
+
+.top-item > img{
+    margin-right: 10px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
