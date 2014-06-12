@@ -4,7 +4,7 @@
     baseUrl: 'www/app',
     removeCombined: true,
     findNestedDependencies: true,
-    dir: 'build',
+    dir: '../output/mygoogletest',
     optimizeCss: 'standard',
     modules: [
         {
