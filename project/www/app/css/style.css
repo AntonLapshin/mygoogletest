@@ -74,6 +74,7 @@ body {
     vertical-align: middle;
     width: 250px;
     cursor: pointer;
+    position: relative;
 }
 
 .top-item > p{
@@ -82,10 +83,17 @@ body {
     margin: 8px;
 }
 
-.top-item > img{
+.ava{
     margin-right: 10px;
     float: left;
     width: 50px;
     height: 50px;
     vertical-align: middle;
+}
+
+.star {
+    position: absolute;
+    top: 0;
+    width: 16px !important;
+    height: 16px !important;
 }

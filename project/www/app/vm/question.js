@@ -25,6 +25,7 @@ define(['ko', 'model/questions'], function (ko, questions) {
         index: ko.observable(),
         time: ko.observable(),
         score: 0,
+        elapsedTime: 0,
 
         tick: function () {
             if (this.time() == '1:00') {
@@ -68,6 +69,14 @@ define(['ko', 'model/questions'], function (ko, questions) {
                 var right = questions[this.index()].right;
                 if (answer.desc === right) {
                     this.score++;
+                    if (this.time === '1:00'){
+                        this.elapsedTime += 60;
+                    }
+                    else
+                    {
+                        var sec = this.time().substr(2);
+                        this.elapsedTime += parseInt(sec, 10);
+                    }
                 }
             }
 
@@ -85,7 +94,7 @@ define(['ko', 'model/questions'], function (ko, questions) {
         finish: function () {
             timerEnabled = false;
             this.isVisible(false);
-            this.callback(this.score);
+            this.callback(this.score, this.elapsedTime);
         }
     };
 

@@ -1,17 +1,18 @@
-define(['jquery', 'vm/top', 'vm/intro', 'vm/question', 'vm/result', 'vm/top-item', 'js/vk'],
-    function ($, topViewModel, introViewModel, questionViewModel, resultViewModel, topItemViewModel, vkMethods) {
+define(['jquery', 'vm/top', 'vm/intro', 'vm/question', 'vm/result', 'vm/top-item', 'js/players', 'model/player'],
+    function ($, topViewModel, introViewModel, questionViewModel, resultViewModel, topItemViewModel, players, player) {
     console.log('mainViewModel');
 
     var mainViewModel = {
-        playerViewModel: topViewModel.emptyPlayer(),
+        playerViewModel: new topItemViewModel(player.playerLoading()),
         topViewModel: topViewModel,
         introViewModel: introViewModel,
         questionViewModel: questionViewModel,
         resultViewModel: resultViewModel
     };
 
-    vkMethods.getPlayerInfo(undefined, function(player){
+    players.getOnePlayer(undefined, function(player){
         mainViewModel.playerViewModel.set(player);
+        mainViewModel.topViewModel.myself = mainViewModel.playerViewModel;
     });
 
     mainViewModel.topViewModel.isVisible(true);
@@ -24,8 +25,8 @@ define(['jquery', 'vm/top', 'vm/intro', 'vm/question', 'vm/result', 'vm/top-item
         mainViewModel.questionViewModel.start();
     };
 
-    mainViewModel.questionViewModel.callback = function(value){
-        mainViewModel.resultViewModel.show(value);
+    mainViewModel.questionViewModel.callback = function(score, elapsedTime){
+        mainViewModel.resultViewModel.show(score, elapsedTime);
     };
 
     mainViewModel.resultViewModel.callback = function(){

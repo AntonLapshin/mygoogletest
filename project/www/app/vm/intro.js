@@ -14,8 +14,6 @@ define(['ko'], function (ko) {
                 self.isVisible(false);
                 self.callback();
             }, 300);
-            //this.isVisible(false);
-            //this.callback();
         }
     };
 

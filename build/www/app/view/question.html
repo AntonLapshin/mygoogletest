@@ -1,0 +1,23 @@
+<div id="question" data-bind="visible: isVisible">
+
+    <div id="progress-wrapper">
+        <p><span data-bind="text: index() * 10"></span>%</p>
+        <progress max="100" data-bind="attr: { value: index() * 10 }" class="css3">
+        </progress>
+    </div>
+
+    <!-- ko with: currentQuestion -->
+    <div id="question-wrapper">
+        <h3 data-bind="text: desc"></h3>
+
+        <ul data-bind="foreach: answers">
+            <li>
+                <a href="#" class="push_button blue" data-bind="text: desc, click: function() { $parents[1].next($data) }"></a>
+            </li>
+        </ul>
+    </div>
+    <!-- /ko -->
+
+    <div id="time-wrapper"><span data-bind="text: time"></span></div>
+
+</div>

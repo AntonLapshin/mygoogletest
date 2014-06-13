@@ -1,4 +1,4 @@
-define(['ko', 'model/results'], function (ko, results) {
+define(['ko', 'model/results', 'js/ajax', 'js/players'], function (ko, results, ajax, players) {
     console.log('results');
 
     var resultViewModel = {
@@ -6,16 +6,23 @@ define(['ko', 'model/results'], function (ko, results) {
 
         result: ko.observable(results[0]),
 
-        show: function (value) {
-            var self = this;
-            var post = results[value].name;
+        show: function (score, elapsedTime) {
+            var self = this,
+                result = results[score],
+                post = result.name;
 
-            require(["vm/main"], function(mainViewModel){
-                mainViewModel.playerViewModel.score(post + ' (51)');
+            score = score * 1000 + elapsedTime;
+
+            require(["vm/main"], function (mainViewModel) {
+                if (score > mainViewModel.playerViewModel.score()) {
+                    ajax.callAjax('upsert', { id: mainViewModel.playerViewModel.player().id, score: score }, function () { }, function (err) { });
+                    mainViewModel.playerViewModel.score(score);
+                    mainViewModel.topViewModel.sort();
+                }
             });
 
-            VK.api('wall.post', { attachments: 'photo-22454303_329340417', message: 'Моя должность в Google: ' + post + '. Заходи, чтобы проверить на какую должность в Google возьмут тебя https://vk.com/app4382885'}, function (result) {
-                self.result(results[value]);
+            VK.api('wall.post', { attachments: 'photo-22454303_329340417', message: 'Моя должность в Google: ' + post + '. Заходи, чтобы проверить на какую должность в Google возьмут тебя https://vk.com/app4382885'}, function (answer) {
+                self.result(result);
                 self.isVisible(true);
             });
         },
