@@ -1,5 +1,5 @@
 {
-  "name": "googletest",
+  "name": "mygoogletest",
   "version": "0.0.1",
   "description": "This is a test",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AntonLapshin/googletest"
+    "url": "https://github.com/AntonLapshin/mygoogletest"
   },
   "keywords": [
     "google",
     "test"
   ],
-  "author": "Anton Lapshin",
+  "author": "Author",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AntonLapshin/googletest/issues"
+    "url": "https://github.com/AntonLapshin/mygoogletest/issues"
   }
 }
