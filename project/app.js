@@ -7,7 +7,7 @@ exports.handler = function (request, response) {
         filename = path.join(__dirname, 'www', uri);
 
     fs.exists(filename, function (exists) {
-        console.log(request.url);
+        //console.log(request.url);
 
         if (!exists) {
             response.writeHead(404, {"Content-Type": "text/plain"});
@@ -23,7 +23,7 @@ exports.handler = function (request, response) {
         };
 
         if (fs.statSync(filename).isDirectory()) {
-            console.log(new Date());
+            //console.log(new Date());
             if (fs.statSync(filename).isDirectory()) filename += '/index.html';            
         }
 

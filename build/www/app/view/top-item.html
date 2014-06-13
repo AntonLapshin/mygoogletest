@@ -1,6 +1,9 @@
 <li class="top-item" data-bind="click: onClick">
-    <img src="" data-bind="attr: { src: img }" />
+    <img class="ava" src="" data-bind="attr: { src: player().img }" />
 
-    <p data-bind="text: name"></p>
-    <p>Должность: <span data-bind="text: score"></span></p>
+    <p data-bind="text: player().name"></p>
+    <p><span data-bind="text: post"></span> (<span data-bind="text: score"></span>)</p>
+    <img alt="star" src="" class="star" data-bind="attr: { src: starSrc}, visible: player().place < 3" style="right: 0"/>
+    <img alt="star" src="" class="star" data-bind="attr: { src: starSrc}, visible: player().place < 2" style="right: 16px"/>
+    <img alt="star" src="" class="star" data-bind="attr: { src: starSrc}, visible: player().place < 1" style="right: 32px"/>
 </li>

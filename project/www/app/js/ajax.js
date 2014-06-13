@@ -1,7 +1,7 @@
 define(['jquery'], function ($) {
     console.log('ajax');
 
-    var SERVER_NAME = "http://mygoogletestdb.herokuapp.com/",
+    var SERVER_NAME = "https://mygoogletestdb.herokuapp.com/",
         URL_END = "callback=?",
         TIMEOUT = 50000;
 

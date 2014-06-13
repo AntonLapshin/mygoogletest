@@ -21,7 +21,7 @@ define(['ko', 'model/results', 'js/ajax', 'js/players'], function (ko, results, 
                 }
             });
 
-            VK.api('wall.post', { attachments: 'photo-22454303_329340417', message: 'Моя должность в Google: ' + post + '. Заходи, чтобы проверить на какую должность в Google возьмут тебя https://vk.com/app4382885'}, function (answer) {
+            VK.api('wall.post', { attachments: 'photo-72833562_332846573', message: 'Моя должность в Google: ' + post + '. Заходи, чтобы проверить на какую должность в Google возьмут тебя https://vk.com/app4382885'}, function (answer) {
                 self.result(result);
                 self.isVisible(true);
             });
