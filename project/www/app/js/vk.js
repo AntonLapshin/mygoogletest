@@ -1,7 +1,11 @@
 define(function () {
 
+    function srcToHttps(src){
+        return "https://pp.vk.me/c" + src.replace("http://cs", "").replace(".vk.me", "");
+    }
+
     function parseUser(data){
-        return { id: data.uid || data.id, img: data.photo_50.replace('http', 'https'), name: data.first_name + ' ' + data.last_name };
+        return { id: data.uid || data.id, img: srcToHttps(data.photo_50), name: data.first_name + ' ' + data.last_name };
     }
 
     return {

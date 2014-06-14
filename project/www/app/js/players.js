@@ -19,7 +19,15 @@ define(['js/ajax', 'js/vk', 'model/player'], function (ajax, vk, player) {
     function getIdScoreDic(ids, scores){
         var dic = {};
         for(var i = 0; i < ids.length; i++){
-            dic[ids[i]] = typeof scores[i] === "object" ? (scores[i].score || 0) : (scores[i] || 0);
+            dic[ids[i]] = scores[ids[i]] || 0;
+        }
+        return dic;
+    }
+
+    function parseScores(scores){
+        var dic = {};
+        for(var i = 0; i < scores.length; i++){
+            dic[scores[i]._id] = scores[i].score;
         }
         return dic;
     }
@@ -39,16 +47,14 @@ define(['js/ajax', 'js/vk', 'model/player'], function (ajax, vk, player) {
         },
 
         getTopPlayers: function(callback){
-            ajax.callAjax('top', null, function (top) {
+            ajax.callAjax('top', null, function (scores) {
                 var ids = [];
-                var scores = [];
-                for (var i = 0; i < top.length; i++) {
-                    var player = top[i];
-                    ids.push(player._id);
-                    scores.push(player.score);
+                var idScoreDicFromDb = parseScores(scores);
+                for (var i = 0; i < scores.length; i++) {
+                    ids.push(scores[i]._id);
                 }
                 var idsText = ids.join(',');
-                var idScoreDic = getIdScoreDic(ids, scores);
+                var idScoreDic = getIdScoreDic(ids, idScoreDicFromDb);
                 getPlayers(idsText, idScoreDic, callback);
             });
         },
@@ -60,8 +66,9 @@ define(['js/ajax', 'js/vk', 'model/player'], function (ajax, vk, player) {
                     return;
                 }
                 ajax.callAjax('scores', { ids: ids }, function(scores){
+                    var idScoreDicFromDb = parseScores(scores);
                     var idsText = ids.join(',');
-                    var idScoreDic = getIdScoreDic(ids, scores);
+                    var idScoreDic = getIdScoreDic(ids, idScoreDicFromDb);
                     getPlayers(idsText, idScoreDic, callback);
                 });
             });
