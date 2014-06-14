@@ -1,7 +1,7 @@
 define(function () {
 
     function parseUser(data){
-        return { id: data.uid || data.id, img: data.photo_50, name: data.first_name + ' ' + data.last_name };
+        return { id: data.uid || data.id, img: data.photo_50.replace('http', 'https'), name: data.first_name + ' ' + data.last_name };
     }
 
     return {
