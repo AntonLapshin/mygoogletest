@@ -26,7 +26,16 @@
       <file leaf-file-name="top-item.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/www/app/vm/top-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="680">
+            <state line="12" column="80" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/www/app/vm/result.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="35" selection-start="537" selection-end="537" vertical-scroll-proportion="0.2989011" vertical-offset="0" max-vertical-offset="910">
               <folding />
             </state>
           </provider>
@@ -36,15 +45,6 @@
         <entry file="file://$PROJECT_DIR$/project/www/app/js/vk.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="30" column="32" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="players.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project/www/app/js/players.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.11050921" vertical-offset="255" max-vertical-offset="1394">
               <folding />
             </state>
           </provider>
@@ -128,7 +128,6 @@
         <option value="$PROJECT_DIR$/project/www/index.html" />
         <option value="$PROJECT_DIR$/app.build.js" />
         <option value="$PROJECT_DIR$/project/www/app/view/result.html" />
-        <option value="$PROJECT_DIR$/project/www/app/model/results.js" />
         <option value="$PROJECT_DIR$/project/www/app/vm/question.js" />
         <option value="$PROJECT_DIR$/project/www/app/js/calculator.js" />
         <option value="$PROJECT_DIR$/project/www/app/vm/intro.js" />
@@ -140,12 +139,13 @@
         <option value="$PROJECT_DIR$/project/www/app/view/top-item.html" />
         <option value="$PROJECT_DIR$/project/app.js" />
         <option value="$PROJECT_DIR$/project/www/app/js/ajax.js" />
-        <option value="$PROJECT_DIR$/project/www/app/vm/top-item.js" />
-        <option value="$PROJECT_DIR$/project/www/app/vm/result.js" />
         <option value="$PROJECT_DIR$/project/package.json" />
         <option value="$PROJECT_DIR$/project/www/app/spider/html/spiderweb.html" />
         <option value="$PROJECT_DIR$/project/www/app/js/vk.js" />
         <option value="$PROJECT_DIR$/project/www/app/js/players.js" />
+        <option value="$PROJECT_DIR$/project/www/app/model/results.js" />
+        <option value="$PROJECT_DIR$/project/www/app/vm/top-item.js" />
+        <option value="$PROJECT_DIR$/project/www/app/vm/result.js" />
       </list>
     </option>
   </component>
@@ -503,7 +503,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -549,7 +549,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/www/app/model/results.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="357" />
+        <state line="6" column="26" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="357">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/www/app/js/players.js">
@@ -735,11 +737,6 @@
         <state line="0" column="0" selection-start="0" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/www/app/model/results.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="3" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/www/app/model/player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="48" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
@@ -787,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/www/app/vm/top-item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/www/app/js/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
@@ -818,13 +808,6 @@
     <entry file="file://$PROJECT_DIR$/project/www/app/vm/question.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="29" selection-start="531" selection-end="531" vertical-scroll-proportion="0.34994584" vertical-offset="0" max-vertical-offset="1819" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/www/app/vm/result.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.63516486" vertical-offset="0" max-vertical-offset="910">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/package.json">
@@ -865,6 +848,27 @@
     <entry file="file://$PROJECT_DIR$/project/www/app/js/players.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.11050921" vertical-offset="255" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/www/app/model/results.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="110" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/www/app/vm/top-item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="80" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/www/app/vm/result.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="537" selection-end="537" vertical-scroll-proportion="0.2989011" vertical-offset="0" max-vertical-offset="910">
           <folding />
         </state>
       </provider>

@@ -10,7 +10,7 @@ define(['ko', 'js/vk', 'model/results'], function (ko, vk, results) {
             return this.score() === 0 ? 'Тест не пройден' : results[Math.floor(this.score() / 1000)].name;
         }, this);
 
-        this.starSrc = 'https://pp.vk.me/c620622/v620622333/9994/3XuLiq4H_vw.jpg';
+        this.starSrc = 'https://pp.vk.me/c620622/v620622333/9a89/J4Buju9C2Y4.jpg';
 
         this.onClick = function(){
             if (self.player().id == 0) // may be "0"
