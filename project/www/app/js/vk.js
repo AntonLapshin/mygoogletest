@@ -1,5 +1,7 @@
 define(function () {
 
+    var ID_GROUP = '72833562';
+
     function srcToHttps(src){
         return "https://pp.vk.me/c" + src.replace("http://cs", "").replace(".vk.me", "");
     }
@@ -41,6 +43,13 @@ define(function () {
                     return;
                 }
                 callback(ids);
+            });
+        },
+
+        isUserInGroup: function(id){
+            VK.api('groups.isMember', { user_id: id, group_id: ID_GROUP }, function(data){
+                var response = data.response;
+                return response.member == 1;
             });
         }
     }

@@ -13,6 +13,9 @@ www/app/css/progress.css
 
 www/app/css/style.css
 ----------------
+www/app/css/button.css
+www/app/css/button-answers.css
+www/app/css/progress.css
 www/app/css/style.css
 
 www/app/spider/css/style.css

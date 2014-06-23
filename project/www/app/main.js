@@ -19,19 +19,19 @@ require(['vk', 'ko', 'koext', 'vm/main', 'infuser'],
 
         VK.init(function () {
             console.log('vk init success');
-/* free currency
-            VK.addCallback('onOrderSuccess', function(order_id) {
-                alert('onOrderSuccess '+ order_id);
-            });
-            VK.addCallback('onOrderFail', function() {
-                alert('onOrderFail');
-            });
-            VK.addCallback('onOrderCancel', function() {
-                alert('onOrderCancel');
-            });
 
-            VK.callMethod('showOrderBox', { type: 'offers', currency: 1});
-*/
+//            VK.addCallback('onOrderSuccess', function(order_id) {
+//                alert('onOrderSuccess '+ order_id);
+//            });
+//            VK.addCallback('onOrderFail', function() {
+//                alert('onOrderFail');
+//            });
+//            VK.addCallback('onOrderCancel', function() {
+//                alert('onOrderCancel');
+//            });
+//
+//            VK.callMethod('showOrderBox', { type: 'offers', currency: 1});
+
         }, function () {
         }, '5.21');
 

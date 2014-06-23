@@ -1,6 +1,6 @@
-@import url('/app/css/button.css');
-@import url('/app/css/button-answers.css');
-@import url('/app/css/progress.css');
+@import url('button.css');
+@import url('button-answers.css');
+@import url('progress.css');
 
 #container { position: absolute; left: 0; top: 0; width: 600px; height: 650px; text-align: center; }
 #progress-wrapper { width: 90%; display: inline-block; }
@@ -12,6 +12,13 @@ ul li { display: block; }
 #result a { display: inline-block; }
 
 h2 { margin: 5px; margin-top: 15px; }
+
+#spider-link {
+    font-size: xx-small;
+    position: absolute;
+    right: 5px;
+    bottom: 20px;
+}
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
