@@ -1,5 +1,5 @@
-define(['jquery', 'vm/top', 'vm/intro', 'vm/question', 'vm/result', 'vm/top-item', 'js/players', 'model/player'],
-    function ($, topViewModel, introViewModel, questionViewModel, resultViewModel, topItemViewModel, players, player) {
+define(['jquery', 'vm/top', 'vm/intro', 'vm/question', 'vm/result', 'vm/top-item', 'js/players', 'model/player', 'vm/ad'],
+    function ($, topViewModel, introViewModel, questionViewModel, resultViewModel, topItemViewModel, players, player, adViewModel) {
     console.log('mainViewModel');
 
     var mainViewModel = {
@@ -7,12 +7,14 @@ define(['jquery', 'vm/top', 'vm/intro', 'vm/question', 'vm/result', 'vm/top-item
         topViewModel: topViewModel,
         introViewModel: introViewModel,
         questionViewModel: questionViewModel,
-        resultViewModel: resultViewModel
+        resultViewModel: resultViewModel,
+        adViewModel: adViewModel
     };
 
     players.getOnePlayer(undefined, function(player){
         mainViewModel.playerViewModel.set(player);
         mainViewModel.topViewModel.myself = mainViewModel.playerViewModel;
+        adViewModel.show(player.id);
     });
 
     mainViewModel.topViewModel.isVisible(true);
@@ -23,6 +25,7 @@ define(['jquery', 'vm/top', 'vm/intro', 'vm/question', 'vm/result', 'vm/top-item
     mainViewModel.introViewModel.callback = function () {
         $('#spider').fadeOut(500);
         mainViewModel.questionViewModel.start();
+        adViewModel.isVisible(false);
     };
 
     mainViewModel.questionViewModel.callback = function(score, elapsedTime){

@@ -1,0 +1,16 @@
+<div id="ad" data-bind="visible: isVisible">
+    <!-- ko if: adItem -->
+    <!-- ko with: adItem -->
+
+    <a target="_blank" data-bind="attr: { href: link }"><img alt="" src="" data-bind="attr: { src: img }"/></a>
+
+    <div class="desc">
+        <p class="name" data-bind="text: name"></p>
+
+        <p class="price"><span data-bind="text: price"></span></p>
+
+        <a target="_blank" data-bind="attr: { href: link }">Интернет-магазин "SAY ME"</a>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+</div>

@@ -51,6 +51,12 @@ define(function () {
                 var response = data.response;
                 return response.member == 1;
             });
+        },
+
+        getAdUser: function(id, callback){
+            VK.api('users.get', { user_ids: id, fields: 'sex,city,bdate' }, function(data){
+                callback(data.response[0]);
+            });
         }
     }
 });

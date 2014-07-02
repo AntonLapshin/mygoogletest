@@ -1,0 +1,35 @@
+#ad {
+    margin: 50px 30px 30px 30px;
+}
+
+#ad img {
+    cursor: pointer;
+    width: 350px;
+    height: 250px;
+    border: 1px solid #333;
+    float: left;
+}
+
+#ad .desc {
+    display: inline-block;
+}
+
+#ad p {
+    margin: 5px;
+}
+
+#ad .name {
+    font-weight: bold;
+}
+
+#ad .price {
+    margin-left: -20px;
+    margin-right: 0;
+    background-color: #60c1ff;
+    color: white;
+    font-size: 40pt;
+}
+
+#ad .r{
+    /*font-family: 'PT Sans', serif;*/
+}
